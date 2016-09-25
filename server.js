@@ -5,20 +5,40 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article One | Vishnu Mohan',
-    heading: 'Article One',
-    date: 'sep 5, 2016',
-    content: `<p>
-                    This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.
-                </p>
-                <p>
-                    This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.
-                </p>
-                <p>
-                    This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.
-                </p>`
-};
+var articles = {
+    'article-one': {
+        title: 'Article One | Vishnu Mohan',
+        heading: 'Article One',
+        date: 'sep 5, 2016',
+        content: `<p>
+                        This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.
+                    </p>
+                    <p>
+                        This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.
+                    </p>
+                    <p>
+                        This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.
+                    </p>`
+    },
+    'article-two': {
+        title: 'Article Two | Vishnu Mohan',
+        heading: 'Article Two',
+        date: 'sep 6, 2016',
+        content: `<p>
+                        This is the content for my Article Two.
+                    </p>
+                    `
+    },
+    'article-three': {
+        title: 'Article Three | Vishnu Mohan',
+        heading: 'Article Two',
+        date: 'sep 6, 2016',
+        content: `<p>
+                        This is the content for my Article Three.
+                    </p>`
+    }
+    };
+
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
