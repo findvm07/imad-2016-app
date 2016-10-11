@@ -72,7 +72,7 @@ function createTemplate (data) {
                 </div>
                 <div>
                     <textarea name="comments" id="comments">
-                     Hey... say something!
+                     Enter your comments here...
                      </textarea>
                         </div>
                     <input type="submit" value="Submit">
