@@ -21,7 +21,7 @@ var nameInput = getElementById('name');
 var name = nameInput.value;
 var submit = getElementById('submit_btn');
 submit.onclick = function() {
-  var names = ['name1', 'name2', 'name3', 'name4'];
+  var names = request.responseText;
   var list = '';
   for(i=0; i<names.length; i++) {
       list += '<li>' + names[i] + '</li>';
@@ -30,3 +30,5 @@ submit.onclick = function() {
   ul.innerHTML = list;
   
 };
+request.open('GET', 'http://findvm07.imad.hasura-app.io/submit-name?name=' + name, true);
+  request.send(null);
