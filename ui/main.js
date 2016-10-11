@@ -70,6 +70,6 @@ submitArticle.onclick = function () {
     var article = articleInput.value;
     
     //Make actual reqest 
-    request.open('GET', 'http;//tenzin-pyboy.imad.hasura-app.io/submit-blogs?blog= ' + article, true);
+    request.open('GET', 'http://findvm07.imad.hasura-app.io/submit-blogs?blog= ' + article, true);
     request.send(null);
 };
