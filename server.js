@@ -94,6 +94,14 @@ app.get('/counter', function (req, res) {
    res.send(counter.toString());
 });
 
+var comment = [];
+app.get('/submit-comment/', function (req, res) {
+    var comm = req.query.comm;
+    comment.push(comm);
+    res.send(JSON.stringify(comment));
+});
+
+
 var names = [];
 app.get('/submit-name/', function (req, res) {
     var name = req.query.name;
