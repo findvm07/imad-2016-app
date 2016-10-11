@@ -41,35 +41,35 @@ request.open('GET', 'http://findvm07.imad.hasura-app.io/submit-name?name=' + nam
   request.send(null);
 };
 
-var submitComment = document.getElementById('submit_btn_Com');
-submitComment.onclick = function () {
-    // Make request to server  and send the article
+var submitArticle = document.getElementById('submit_btn_art');
+submitArticle.onclick = function () {
+    // Make requestt to server  and send the article
     // Create a request Object
     var request = new XMLHttpRequest();
     
-    // Capture the response and store it in a variable
+    // Capture the respond and store it in a variable
     request.onreadystatechange = function () {
         
         //Take action
         if(request.status === 200 ) {
             
             // Capture the list of articles and render it as a list.
-            var comments = request.responseText;
-            comments = JSON.parse(comments);
+            var articles = request.responseText;
+            articles = JSON.parse(articles);
             var list = '';
-            for(var i=0; i<comments.length; i++) {
-                list += '<li>' + comments[i] + '</li>';
+            for(var i=0; i<articles.length; i++) {
+                list += '<p>' + articles[i] + '</p>';
             }
-            var ul = document.getElementById('comment-para');
+            var ul = document.getElementById('articles-para');
             ul.innerHTML = list;
         }
     };
     
-    //submit comment
-    var commentInput = document.getElementById('comment');
-    var comment = commentvalue;
+    //submit article 
+    var articleInput = document.getElementById('article');
+    var article = articleInput.value;
     
     //Make actual reqest 
-    request.open('GET', 'http://findvm07.imad.hasura-app.io/submit-comment?comment=' + comment, true);
-  request.send(null);
+    request.open('GET', 'http;//tenzin-pyboy.imad.hasura-app.io/submit-blogs?blog= ' + article, true);
+    request.send(null);
 };
