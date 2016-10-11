@@ -41,7 +41,7 @@ request.open('GET', 'http://findvm07.imad.hasura-app.io/submit-name?name=' + nam
   request.send(null);
 };
 
-var submitComment = document.getElementById('submit_btn_art');
+var submitComment = document.getElementById('submit_btn_Com');
 submitComment.onclick = function () {
     // Make request to server  and send the article
     // Create a request Object
@@ -55,12 +55,12 @@ submitComment.onclick = function () {
             
             // Capture the list of articles and render it as a list.
             var comments = request.responseText;
-            articles = JSON.parse(comments);
+            comments = JSON.parse(comments);
             var list = '';
             for(var i=0; i<comments.length; i++) {
                 list += '<li>' + comments[i] + '</li>';
             }
-            var ul = document.getElementById('articles-para');
+            var ul = document.getElementById('comment-para');
             ul.innerHTML = list;
         }
     };
