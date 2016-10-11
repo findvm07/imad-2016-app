@@ -71,12 +71,13 @@ function createTemplate (data) {
                 </div> 
                 <hr/>
                 <p><b>Post your Comments below...</b></p>
-                <div>
-                    <textarea name="comments" id="comments">
-                     Enter your comments here...
-                     </textarea>
-                        </div><br>
-                    <input type="submit" value="Submit">
+                <div id="article-para">
+                </div>
+                <div class="comment">
+                    <textarea type="text" id="article" placeholder="article" rows="10" cols="100">
+                        Start writting Article Here.
+                    </textarea>
+                <input type='submit' value='Submit' id="submit_btn_art"/>
                 </div>
                 
             </body>
@@ -94,11 +95,12 @@ app.get('/counter', function (req, res) {
    res.send(counter.toString());
 });
 
-var comment = [];
-app.get('/submit-comment/', function (req, res) {
-    var comm = req.query.comm;
-    comment.push(comm);
-    res.send(JSON.stringify(comment));
+var blogs = [];
+app.get('/submit-blogs', function (req, res) {
+    // Get the article from the request
+    var blog = req.query.blog;
+    blogs.push(blog);
+    res.send(JSON.stringify(blogs));
 });
 
 
