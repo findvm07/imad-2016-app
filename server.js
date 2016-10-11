@@ -15,9 +15,6 @@ var articles = {
                     </p>
                     <p>
                         This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.
-                    </p>
-                    <p>
-                        This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.  This is the content for my Article One.
                     </p>`
     },
     'article-two': {
