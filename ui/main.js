@@ -58,7 +58,7 @@ submitArticle.onclick = function () {
             articles = JSON.parse(articles);
             var list = '';
             for(var i=0; i<articles.length; i++) {
-                list += '<p>' + articles[i] + '</p>';
+                list += '<li>' + articles[i] + '</li>';
             }
             var ul = document.getElementById('articles-para');
             ul.innerHTML = list;
