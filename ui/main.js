@@ -37,8 +37,9 @@ submit.onclick = function() {
             }
         }
     };
-};
+
 var nameInput = getElementById('name');
 var name = nameInput.value; 
 request.open('GET', 'http://findvm07.imad.hasura-app.io/submit-name?name=' + name, true);
   request.send(null);
+};
